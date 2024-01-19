@@ -4,7 +4,7 @@ Read this document all the way through, nearly everything in it is important for
 ## Version control
 
 This is a Git repository.
-We _highly_ recommend creating your own GitHub repo to track your changes and/or collaborate with your teammates if an assignment is team based. HW1 is not team-based, but starting a Github page is a very good practice.
+ECU _highly_ recommends creating your own GitHub repo for your classes. This can be used to track your changes and/or collaborate with your teammates if an assignment is team based. Note: HW1 is not team-based, but starting a Github page is a very good practice.
 
 Follow these steps to set up your own github project area:
 
@@ -36,7 +36,7 @@ Also, see the hw1-notes document in this respository
 ## Build system
 
 This assignment uses [CMake](https://cmake.org/) to provide a consistent build system for all students.
-You should not need to modify the provided build in any way (CMakeLists.txt).
+You should not need to modify the provided build in any way (CMakeLists.txt). See the comment above about modules, which will be required to perform the compile and to run the code.
 This document describes the basic process for configuring and building the code.
 
 First, note that this file is in the _source directory_.
@@ -55,6 +55,7 @@ The basic way to do this is:
 ```
 student@login04:~/hw1/build> cmake -DCMAKE_BUILD_TYPE=Release ..
 ```
+(do not forgot the two "dots" .. at the end of the command above, which specifies "[look] back one directory")
 
 This command tells CMake to generate the build files for HW1 in _Release_ mode.
 The syntax `-D[VAR]=[VAL]` allows you to set a variable.
@@ -84,6 +85,7 @@ student@login04:~/hw1/build> cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_FLAGS="-O2
 ## Compiling
 
 Once your build is configured, you can actually compile by running `make` from the build directory.
+If anything went wrong, or if changes were made you may need to run "make clean"
 
 ```
 student@login04:~/hw1/build> make
@@ -103,7 +105,7 @@ You can freely make configuration changes to the build and re-run make however y
 
 ## Testing
 
-To run your code on the cluster, you can use the generated `job-blocked` script like so:
+To run your code on the cluster, you can use the generated `job-xxxxxx` script like so:
 
 ```
 student@login04:~/hw1/build> sbatch job-blocked
@@ -128,12 +130,14 @@ JOBID            ST USER      NAME          NODES TIME_LIMIT       TIME  SUBMIT_
 ```
 
 When our job is finished, we'll find new files in our build directory (current directory) containing the output of our program.
-For example, we'll find the files job-blas.o4613758 and job-blas.e4613758.
+For example, we'll find the files similar to job-blas.o4613758 and job-blas.e4613758.
 The first file contains the standard output of our program, and the second file contains the standard error.
 
 Feel free to modify `job-blocked`, but note that changes to it will be overwritten by CMake if you reconfigure your
 build.
 It might therefore be easier to copy it under a new name like `my-job` and modify it as you desire.
+Example in Linux: $ cp job-blocked my-job"
+Or you could open it in an editor and save it as a new file
 
 ### Interactive sessions
 
@@ -144,13 +148,10 @@ allocation quicker.
 
 ## Submission
 
-Once you're happy with your code compilation and feel it is running properly, you can get ready to submit.
-First, make sure that your write up is in the same directory as this README and is named `csci4110-PirateID_hw1.pdf` where `PirateID`is your PirateID (beginning of your email address, but without the full email) Note: this is NOT your bannerID number.
+Part of the grade will be making modifications to the dgemm-blocked.c code in order to make it run more efficiently. Run three benchmarks of the standard blocked benchmark before you make any modifications. In fact, it is a good idea to make a backup of the blocked code before you make any changes. Once you have the three benchmark runs, you can make modifications to improve the speed of the blocked benchmark. Refer to the slides and the book for help with making the code more efficient. Be sure you understand why the changes made it more efficient. For the grade, I will be looking for at least a 5% increase in the benchmark speed while still performing all the same benchmarks. In other words, do not have the program quit early before performing all the steps. Do not copy the code from the more efficient benchmarks included here or on the internet. In order to learn the most from the process, this should be your own work. I mentioned a few things in class such as loop unfolding, using registers, writing assembly inside of c language, compiler optimizations, etc.
 
-If you have difficulty creating the pdf, you can create a simple text file with the same name but ending in .txt instead of .pdf
-
-Your write up should give a syopsis of the performance between the benchmarks, explain the differences in speed between the naive, blocked and blas benchmarks. Look through the code for each benchmark and explain why some of the benchmarks ran faster than others. Please write this in your own words, no direct copy/paste of websites explaining blas, for instance.
-The paper should be about a half-page to a full page in length.
+Your write up should give a syopsis of the performance between the benchmarks, explain the differences in speed between the naive, blocked and blas benchmarks. Look through the code for each benchmark and explain why some of the benchmarks ran faster than others. Explain why your code modifications or compilation changes increased performance. Please write this in your own words, no direct copy/paste of websites explaining blas, for instance.
+The paper should be at least a half-page to a full page in length. More than a page should not be neccessary.
 
 Then configure the build with your group number:
 Note: we do not have teams for this assignment, just use 00 for your team number.
@@ -159,6 +160,10 @@ student@login04:~/hw1/build> cmake -DGROUP_NO=NN ..
 student@login04:~/hw1/build> make package
 ```
 
+Once you're happy with your code compilation and feel it is running properly, you can get ready to submit.
+First, make sure that your write up is in the same directory as this README and is named `csci4110-PirateID_hw1.pdf` where `PirateID`is your PirateID (beginning of your email address, but without the full email) Note: this is NOT your bannerID number.
+
+If you have difficulty creating the pdf, you can create a simple text file with the same name but ending in .txt instead of .pdf
 Use the command below to produce an archive containing the following files:
 
 ```
@@ -170,6 +175,11 @@ Possible tar command output:
 ```
 
 Make sure you capture the binary files there were built. I want to make sure everyone is able to build successfully, and it will be part of the grade.
+
+I showed the class how to "scp" the file to your own computer during the last class. If you are having trouble with this, you could obtain your code from your git site as well, if you created one. If you have a Windows system, you can use the "putty" tools in order to use scp from a Windows command line. Google "putty pscp.exe". The guy who made these tools is named chiark, double check that you are getting the utility from the right place.
+
+The final turn in for this assignment should be submitted to Canvas. It is set to allow .tar and .zip files, with the preference being a .tar file.
+
 
 Optional reading:
 If you prefer to create the archive yourself, make sure that it follows this structure _exactly_.
