@@ -1,0 +1,6 @@
+/jet/home/cstiver/hw1/csci4110/hw1/build/CMakeFiles/rebuild_cache.dir
+/jet/home/cstiver/hw1/csci4110/hw1/build/CMakeFiles/edit_cache.dir
+/jet/home/cstiver/hw1/csci4110/hw1/build/CMakeFiles/benchmark-blocked.dir
+/jet/home/cstiver/hw1/csci4110/hw1/build/CMakeFiles/benchmark-blas.dir
+/jet/home/cstiver/hw1/csci4110/hw1/build/CMakeFiles/benchmark.dir
+/jet/home/cstiver/hw1/csci4110/hw1/build/CMakeFiles/benchmark-naive.dir
