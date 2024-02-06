@@ -7,11 +7,11 @@ C_DEFINES =
 
 C_INCLUDES = 
 
-C_FLAGS = -O3 -DNDEBUG -Wall -pedantic -march=x86-64
+C_FLAGS = -g -Wall -pedantic -march=x86-64
 
 CXX_DEFINES = 
 
 CXX_INCLUDES = 
 
-CXX_FLAGS = -O3 -DNDEBUG -Wall -pedantic -march=x86-64
+CXX_FLAGS = -g -Wall -pedantic -march=x86-64
 
