@@ -1,9 +1,9 @@
 CMakeFiles/benchmark-blas.dir/dgemm-blas.c.o: \
  /jet/home/cstiver/hw1/csci4110/hw1/dgemm-blas.c \
  /usr/include/stdc-predef.h \
- /opt/packages/openblas/intel/0.3.13-intel20.4/include/cblas.h \
+ /jet/packages/spack/opt/spack/linux-centos8-zen2/gcc-10.2.0/openblas-0.3.12-fvq742gpvmvamo2n63uths7ghjtaz74o/include/cblas.h \
  /usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h \
- /opt/packages/openblas/intel/0.3.13-intel20.4/include/openblas_config.h \
+ /jet/packages/spack/opt/spack/linux-centos8-zen2/gcc-10.2.0/openblas-0.3.12-fvq742gpvmvamo2n63uths7ghjtaz74o/include/openblas_config.h \
  /usr/lib/gcc/x86_64-redhat-linux/8/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/sys/cdefs.h \

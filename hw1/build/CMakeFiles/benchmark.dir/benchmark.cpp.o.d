@@ -142,5 +142,5 @@ CMakeFiles/benchmark.dir/benchmark.cpp.o: \
  /usr/include/c++/8/x86_64-redhat-linux/bits/opt_random.h \
  /usr/include/c++/8/bits/random.tcc /usr/include/c++/8/numeric \
  /usr/include/c++/8/bits/stl_numeric.h \
- /opt/packages/openblas/intel/0.3.13-intel20.4/include/cblas.h \
- /opt/packages/openblas/intel/0.3.13-intel20.4/include/openblas_config.h
+ /jet/packages/spack/opt/spack/linux-centos8-zen2/gcc-10.2.0/openblas-0.3.12-fvq742gpvmvamo2n63uths7ghjtaz74o/include/cblas.h \
+ /jet/packages/spack/opt/spack/linux-centos8-zen2/gcc-10.2.0/openblas-0.3.12-fvq742gpvmvamo2n63uths7ghjtaz74o/include/openblas_config.h

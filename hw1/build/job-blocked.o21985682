@@ -1,0 +1,29 @@
+Description:	Simple blocked dgemm.
+
+Size: 31	Mflops/s: 598.39	Percentage: 1.07
+Size: 32	Mflops/s: 602.47	Percentage: 1.08
+Size: 96	Mflops/s: 606.71	Percentage: 1.08
+Size: 97	Mflops/s: 605.72	Percentage: 1.08
+Size: 127	Mflops/s: 604.27	Percentage: 1.08
+Size: 128	Mflops/s: 598.46	Percentage: 1.07
+Size: 129	Mflops/s: 603.13	Percentage: 1.08
+Size: 191	Mflops/s: 606.56	Percentage: 1.08
+Size: 192	Mflops/s: 605.60	Percentage: 1.08
+Size: 229	Mflops/s: 604.90	Percentage: 1.08
+Size: 255	Mflops/s: 605.65	Percentage: 1.08
+Size: 256	Mflops/s: 597.45	Percentage: 1.07
+Size: 257	Mflops/s: 605.07	Percentage: 1.08
+Size: 319	Mflops/s: 602.78	Percentage: 1.08
+Size: 320	Mflops/s: 606.16	Percentage: 1.08
+Size: 321	Mflops/s: 605.61	Percentage: 1.08
+Size: 417	Mflops/s: 604.04	Percentage: 1.08
+Size: 479	Mflops/s: 604.03	Percentage: 1.08
+Size: 480	Mflops/s: 603.56	Percentage: 1.08
+Size: 511	Mflops/s: 604.80	Percentage: 1.08
+Size: 512	Mflops/s: 533.37	Percentage: 0.95
+Size: 639	Mflops/s: 609.61	Percentage: 1.09
+Size: 640	Mflops/s: 603.09	Percentage: 1.08
+Size: 767	Mflops/s: 605.60	Percentage: 1.08
+Size: 768	Mflops/s: 601.77	Percentage: 1.07
+Size: 769	Mflops/s: 605.10	Percentage: 1.08
+Average percentage of Peak = 1.07

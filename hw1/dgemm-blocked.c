@@ -1,7 +1,8 @@
+#pragma GCC optimize ("peel-loops")
 const char* dgemm_desc = "Simple blocked dgemm.";
 
 #ifndef BLOCK_SIZE
-#define BLOCK_SIZE 41
+#define BLOCK_SIZE 8
 #endif
 
 #define min(a, b) (((a) < (b)) ? (a) : (b))
@@ -18,8 +19,11 @@ static void do_block(int lda, int M, int N, int K, double* A, double* B, double*
         for (int j = 0; j < N; ++j) {
             // Compute C(i,j)
             double cij = C[i + j * lda];
-            for (int k = 0; k < K; ++k) {
+            for (int k = 0; k < K; k += 2) {
                 cij += A[i + k * lda] * B[k + j * lda];
+		if (k + 1 < K) {
+			cij += A[i + (k + 1) * lda] * B[(k + 1) + j * lda];
+		}
             }
             C[i + j * lda] = cij;
         }

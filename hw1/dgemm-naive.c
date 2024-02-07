@@ -1,3 +1,4 @@
+#pragma GCC optimize ("peel-loops")
 const char* dgemm_desc = "Naive, three-loop dgemm.";
 
 /*
