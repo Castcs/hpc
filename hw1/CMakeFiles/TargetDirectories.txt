@@ -1,6 +1,12 @@
+/jet/home/cstiver/hw1/csci4110/hw1/CMakeFiles/install/strip.dir
+/jet/home/cstiver/hw1/csci4110/hw1/CMakeFiles/install.dir
+/jet/home/cstiver/hw1/csci4110/hw1/CMakeFiles/list_install_components.dir
 /jet/home/cstiver/hw1/csci4110/hw1/CMakeFiles/rebuild_cache.dir
 /jet/home/cstiver/hw1/csci4110/hw1/CMakeFiles/edit_cache.dir
-/jet/home/cstiver/hw1/csci4110/hw1/CMakeFiles/benchmark-blocked.dir
 /jet/home/cstiver/hw1/csci4110/hw1/CMakeFiles/benchmark-blas.dir
 /jet/home/cstiver/hw1/csci4110/hw1/CMakeFiles/benchmark.dir
+/jet/home/cstiver/hw1/csci4110/hw1/CMakeFiles/package.dir
+/jet/home/cstiver/hw1/csci4110/hw1/CMakeFiles/package_source.dir
+/jet/home/cstiver/hw1/csci4110/hw1/CMakeFiles/install/local.dir
 /jet/home/cstiver/hw1/csci4110/hw1/CMakeFiles/benchmark-naive.dir
+/jet/home/cstiver/hw1/csci4110/hw1/CMakeFiles/benchmark-blocked.dir

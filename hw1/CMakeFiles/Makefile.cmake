@@ -21,6 +21,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake/Modules/CMakePushCheckState.cmake"
   "/usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/usr/share/cmake/Modules/CPack.cmake"
+  "/usr/share/cmake/Modules/CPackComponent.cmake"
   "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake"
   "/usr/share/cmake/Modules/CheckFunctionExists.cmake"
   "/usr/share/cmake/Modules/CheckIncludeFile.cmake"
@@ -39,6 +41,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake/Modules/Platform/Linux.cmake"
   "/usr/share/cmake/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/cmake/Templates/CPackConfig.cmake.in"
   )
 
 # The corresponding makefile is:
@@ -49,6 +52,8 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "CPackConfig.cmake"
+  "CPackSourceConfig.cmake"
   "job-naive"
   "job-blocked"
   "job-blas"
@@ -57,8 +62,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/benchmark-blocked.dir/DependInfo.cmake"
   "CMakeFiles/benchmark-blas.dir/DependInfo.cmake"
   "CMakeFiles/benchmark.dir/DependInfo.cmake"
   "CMakeFiles/benchmark-naive.dir/DependInfo.cmake"
+  "CMakeFiles/benchmark-blocked.dir/DependInfo.cmake"
   )
